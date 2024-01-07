@@ -36,7 +36,7 @@
   }
 
   button {
-    @apply h-[100px] w-[100px] text-2xl border-none rounded-full cursor-pointer transition active:scale-[0.90]
+    @apply h-[100px] w-[100px] text-3xl border-none rounded-full cursor-pointer transition active:scale-[0.90]
   }
 
   #display {
@@ -48,7 +48,7 @@
   }
 
   #expression {
-    @apply text-white text-2xl h-6 text-[#6c6c6c];
+    @apply text-2xl h-6 text-[#6c6c6c];
   }
 
   #zero {
