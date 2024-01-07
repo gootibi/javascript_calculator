@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+
+   /* Background setup */
+
   html {
     @apply bg-slate-400;
   }
@@ -12,19 +15,17 @@
   }
 
   .dark-gray {
-    @apply bg-[#6c6c6c];
+    @apply bg-[#6c6c6c] text-white;
   }
 
   .yellow {
-    @apply bg-[#f29c14];
+    @apply bg-[#f29c14] text-white;
   }
+
+  /* Container, h1 and h2 elements style */
 
   .container {
     @apply flex flex-col justify-center items-center h-[100vh];
-  }
-
-  #calculator {
-    @apply grid grid-cols-4 gap-[20px] p-[50px] pt-[10px] mt-[20px] rounded-[20px] bg-slate-950 text-black;
   }
 
   h1 {
@@ -35,20 +36,34 @@
     @apply mb-1 text-xl font-semibold text-center;
   }
 
-  button {
-    @apply h-[100px] w-[100px] text-3xl border-none rounded-full cursor-pointer transition active:scale-[0.90]
+  /* Calculator style */
+
+  #calculator {
+    @apply grid grid-cols-4 gap-[20px] p-[50px] pt-[10px] mt-[20px] rounded-[20px] bg-slate-950 text-black;
   }
 
+  /* Display style */
+
   #display {
-    @apply text-right col-span-4;
+    @apply text-right col-span-4 mt-1 mb-2;
   }
 
   #answer {
-    @apply h-12 text-[48px] text-white;
+    @apply h-12 text-[48px] text-white mb-6;
   }
 
   #expression {
-    @apply text-2xl h-6 text-[#6c6c6c];
+    @apply text-3xl h-6 text-[#6c6c6c];
+  }
+
+  /* Buttons style */
+
+  button {
+    @apply h-[100px] w-[100px] text-2xl font-bold border-none rounded-full cursor-pointer transition active:scale-[0.90]
+  }
+
+  #subtract {
+  @apply text-3xl
   }
 
   #zero {
