@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-slate-400;
+  }
+
+  .light-gray {
+    @apply bg-[#f0f0f0];
+  }
+
+  .dark-gray {
+    @apply bg-[#6c6c6c];
+  }
+
+  .yellow {
+    @apply bg-[#f29c14];
+  }
+
+  .container {
+    @apply flex flex-col justify-center items-center h-[100vh];
+  }
+
+  #calculator {
+    @apply grid grid-cols-4 gap-[20px] p-[50px] pt-[10px] mt-[20px] rounded-[20px] bg-slate-950 text-black;
+  }
+
+  h1 {
+    @apply mb-2 text-3xl font-bold text-center;
+  }
+
+  h2 {
+    @apply mb-1 text-xl font-semibold text-center;
+  }
+
+  button {
+    @apply h-[100px] w-[100px] text-2xl border-none rounded-full cursor-pointer transition active:scale-[0.90]
+  }
+
+  #display {
+    @apply text-right col-span-4;
+  }
+
+  #answer {
+    @apply h-12 text-[48px] text-white;
+  }
+
+  #expression {
+    @apply text-white text-2xl h-6 text-[#6c6c6c];
+  }
+
+  #zero {
+    @apply col-span-2 w-[218px];
+  }
+}
