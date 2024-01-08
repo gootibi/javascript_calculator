@@ -7,7 +7,7 @@
    /* Background setup */
 
   html {
-    @apply bg-slate-400;
+    @apply bg-slate-400 h-full;
   }
 
   .light-gray {
@@ -29,31 +29,35 @@
   }
 
   h1 {
-    @apply mb-2 text-3xl font-bold text-center;
+    @apply mb-1 text-3xl font-bold text-center;
   }
 
   h2 {
     @apply mb-1 text-xl font-semibold text-center;
   }
 
+  .footer {
+    @apply font-bold mb-3
+  }
+
   /* Calculator style */
 
   #calculator {
-    @apply grid grid-cols-4 gap-[20px] p-[50px] pt-[10px] mt-[20px] rounded-[20px] bg-slate-950 text-black;
+    @apply grid grid-cols-4 gap-[20px] p-[40px] pt-[10px] mt-[20px] rounded-[20px] bg-slate-950 text-black;
   }
 
   /* Display style */
 
   #display {
-    @apply text-right col-span-4 mt-1 mb-2;
+    @apply text-right col-span-4 mt-4 p-2 pb-4 mb-2 bg-slate-900 rounded-[20px];
   }
 
   #answer {
-    @apply h-12 text-[48px] text-white mb-6;
+    @apply h-12 text-[48px] text-white mb-4;
   }
 
   #expression {
-    @apply text-3xl h-6 text-[#6c6c6c];
+    @apply text-3xl h-6 text-[#6c6c6c] border-t-[1px] pr-2 pl-2 border-stone-700 border-opacity-50;
   }
 
   /* Buttons style */

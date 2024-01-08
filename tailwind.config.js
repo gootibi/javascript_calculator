@@ -7,12 +7,6 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: {
-        DEFAULT: '0'
-      },
-      margin: {
-        DEFAULT: '0',
-      },
     },
     extend: {},
   },
