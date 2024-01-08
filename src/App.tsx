@@ -3,7 +3,7 @@ import { useState } from 'react';
 function App() {
 
   const [answer, setAnswer] = useState("");
-  const [expression, setExpression] = useState("");
+  const [expression, setExpression] = useState("0");
   const et = expression.trim();
 
   const isOperator = (symbol: string) => {
@@ -12,26 +12,27 @@ function App() {
 
   const buttonPress = (symbol: string) => {
      // split by operators and get last number
-    const lastNumber = expression.split(/[-+*/]/g).pop();
+    const lastNumber = et.split(/[-+*/]/g).pop();
 
     if (symbol === "clear") {
       setAnswer("");
       setExpression("0");
     } else if (symbol === "negative" && answer !== "") {
       setAnswer(answer.toString().startsWith("-") ? answer.slice(1) : "-" + answer);
-    } else if (symbol === "percentage" && answer !== "") {
-      setAnswer((parseFloat(answer) / 100).toString());
+    } else if (symbol === "percentage" && expression !== "") {
+      setAnswer((parseFloat(et) / 100).toString());
+      setExpression("0");
     } else if (isOperator(symbol)) {
       setExpression(et + " " + symbol + " ");
     } else if (symbol === "=") {
       calculate();
-    } else if (symbol === "0" && !expression.startsWith("0")) {
+    } else if (symbol === "0" && !et.startsWith("0")) {
       setExpression(expression + symbol);
     } else if (symbol === ".") {
       // if last number already has a decimal, don't add another
       if (lastNumber?.includes(".")) return;
-      setExpression(expression + symbol);
-    } else if (expression.startsWith("0")) {
+      setExpression(et + symbol);
+    } else if (expression.startsWith("0") && expression.charAt(1) !== ".") {
       setExpression(expression.slice(1) + symbol);
     } else {
       setExpression(expression + symbol);
